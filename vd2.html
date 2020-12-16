@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dgn = prompt("Nhap don gia ngay", "300");
+        var dgt = prompt("Nhap don gia tuan", "2000");
+        var dgth = prompt("Nhap don gia thang", "8000");
+        var d = prompt("Nhap so ngay o");
+        var ngay, tuan, thang;
+        if(d > 30) {
+            thang = Math.floor( d / 30)
+            if(d%30 > 7) {
+                tuan = Math.floor (d%30 / 7)
+                ngay = (d%30)%7;
+            }
+            else {
+                tuan = 0;
+                ngay = Math.floor(d%30)
+            }
+            if(ngay == 0) {
+
+            }
+            alert("Ban o " + thang + " thang " + tuan + " tuan va " + ngay + " ngay voi gia " + (thang*dgth + tuan*dgt + ngay*dgn));
+        }
+        else {
+            tuan = Math.floor(d/7);
+            ngay = d%7;
+            alert("Ban o " + tuan + " tuan va " + ngay + " ngay voi gia " + (tuan*dgt + ngay*dgn));
+        }
+    </script>
+</body>
+</html>
